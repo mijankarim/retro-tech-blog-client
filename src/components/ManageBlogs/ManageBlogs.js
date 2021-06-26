@@ -9,7 +9,7 @@ const ManageBlogs = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [deleted, setDeleted] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:5050/blogs")
+    fetch("https://mighty-anchorage-93647.herokuapp.com/blogs")
       .then((res) => res.json())
       .then((data) => {
         setBlogs(data);
@@ -18,7 +18,7 @@ const ManageBlogs = () => {
   }, [blogs]);
 
   const handleDelete = (id) => {
-    fetch(`http://localhost:5050/delete/${id}`, {
+    fetch(`https://mighty-anchorage-93647.herokuapp.com/delete/${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

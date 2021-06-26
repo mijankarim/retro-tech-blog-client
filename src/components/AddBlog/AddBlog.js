@@ -33,7 +33,7 @@ const AddBlog = () => {
       image: imageURL,
     };
 
-    const url = `http://localhost:5050/addBlog`;
+    const url = `https://mighty-anchorage-93647.herokuapp.com/addBlog`;
     fetch(url, {
       method: "POST",
       headers: {
