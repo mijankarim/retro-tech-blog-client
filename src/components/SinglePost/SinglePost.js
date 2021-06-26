@@ -23,13 +23,13 @@ const SinglePost = () => {
         <Row>
           <Col>
             {isLoading ? (
-              <div>
+               <div className="d-flex align-items-center justify-content-center loader my-5 py-5">
                 <Spinner animation="border" variant="danger" />
               </div>
             ) : (
               <div>
                 <h2 className="mb-4">{title}</h2>
-                <img src={image} alt={title} />
+                <img src={image} alt={title} className="img-fluid"/>
                 <div className="my-4">{content}</div>
               </div>
             )}

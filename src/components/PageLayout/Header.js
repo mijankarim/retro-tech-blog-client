@@ -13,7 +13,7 @@ const Header = () => {
               </Navbar.Brand>
               <Navbar.Toggle aria-controls="responsive-navbar-nav" />
               <Navbar.Collapse id="responsive-navbar-nav">
-                <Nav className="ml-auto d-flex justify-content-center">
+                <Nav className="ms-auto d-flex justify-content-center navbar-nav">
                   <Link to="/">Home</Link>
                   <Link to="/about">About</Link>
                   <Link to="/login">Login</Link>

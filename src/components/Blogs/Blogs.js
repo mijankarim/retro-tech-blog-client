@@ -19,7 +19,7 @@ const Blogs = () => {
       <Row>
         <Col>
           {isLoading ? (
-            <div>
+            <div className="d-flex align-items-center justify-content-center loader my-5 py-5">
               <Spinner animation="border" variant="danger" />
             </div>
           ) : (
@@ -30,9 +30,9 @@ const Blogs = () => {
                 </div>
               ) : (
                 posts.map((post) => (
-                  <div  key={post._id}>
+                  <Col md={6}  key={post._id}>
                     <Blog post={post}/>
-                  </div>
+                  </Col>
                 ))
               )}
             </Row>

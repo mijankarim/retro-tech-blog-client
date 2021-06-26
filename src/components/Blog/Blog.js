@@ -15,7 +15,7 @@ const Blog = (props) => {
             src={image}
             alt={title}
             onClick={handleClick}
-            className="cursor-pointer"
+            className="cursor-pointer img-fluid"
           />
 
           <h3 className="my-3 cursor-pointer" onClick={handleClick}>
