@@ -9,7 +9,7 @@ const SinglePost = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5050/blog/${id.id}`)
+    fetch(`https://mighty-anchorage-93647.herokuapp.com/blog/${id.id}`)
       .then((res) => res.json())
       .then((data) => {
         setPost(data);
