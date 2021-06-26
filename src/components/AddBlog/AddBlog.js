@@ -110,7 +110,7 @@ const AddBlog = () => {
                 </Col>
               </Row>
 
-              <Button className="my-3" type="submit">
+              <Button className="my-3 custom-btn" type="submit">
                 Submit
               </Button>
               {success && (

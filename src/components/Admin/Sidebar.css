@@ -1,5 +1,5 @@
 .sidebar{
-    background:#034170;
+    background:#224a49;
     min-height:100%;
     padding:50px 0;
 }
@@ -8,11 +8,12 @@
     color: #fff;
     font-weight:bold;
     padding-left:30px;
+    text-decoration: none;
     
 }
 
 .site-title:hover{
-    color:#f47629;
+    color:  rgb(229,62,38);
     text-decoration: none;
 }
 

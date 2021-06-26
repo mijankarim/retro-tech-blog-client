@@ -102,7 +102,7 @@ const Login = () => {
         <Col>
           <div>
             <h3 className="text-center mt-5 mb-5">
-              <Link to="/">Retro Tech Blog</Link>
+              <Link to="/" className="post-title">Retro Tech Blog</Link>
             </h3>
           </div>
           <div className="form-container mx-auto border border-dark px-4 py-4 my-4">
@@ -138,7 +138,7 @@ const Login = () => {
                 )}
               </Form.Group>
 
-              <Button className="city-btn full-width-btn" type="submit">
+              <Button className="custom-btn full-width-btn" type="submit">
                 Sign In
               </Button>
             </Form>

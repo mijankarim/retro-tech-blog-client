@@ -28,7 +28,7 @@ const SinglePost = () => {
               </div>
             ) : (
               <div>
-                <h2 className="mb-4">{title}</h2>
+                <h2 className="mb-4 post-title">{title}</h2>
                 <img src={image} alt={title} className="img-fluid"/>
                 <div className="my-4">{content}</div>
               </div>

@@ -18,14 +18,14 @@ const Blog = (props) => {
             className="cursor-pointer img-fluid"
           />
 
-          <h3 className="my-3 cursor-pointer" onClick={handleClick}>
+          <h3 className="my-3 post-title cursor-pointer" onClick={handleClick}>
             {title}
           </h3>
 
           <div className="limit-text">{content}</div>
-          <Button className="mt-4 mb-3" onClick={handleClick}>
-            Read More
-          </Button>
+          <p className="mt-3 mb-3 d-block more-link cursor-pointer" onClick={handleClick}>
+            Continue Reading
+          </p>
         </Col>
       </Row>
     </Container>

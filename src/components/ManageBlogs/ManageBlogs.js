@@ -62,7 +62,7 @@ const ManageBlogs = () => {
                       
                       <td className="text-center">
                         <Button
-                          className="ml-2"
+                          className="ml-2 custom-btn"
                           onClick={() => handleDelete(`${blog._id}`)}
                         >
                           <FaTrashAlt />
