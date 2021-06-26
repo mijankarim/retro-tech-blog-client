@@ -1,0 +1,29 @@
+.sidebar{
+    background:#034170;
+    min-height:100%;
+    padding:50px 0;
+}
+
+.site-title{
+    color: #fff;
+    font-weight:bold;
+    padding-left:30px;
+    
+}
+
+.site-title:hover{
+    color:#f47629;
+    text-decoration: none;
+}
+
+.sidebar-links{
+    list-style:none;
+}
+
+.sidebar-links li{
+    margin-bottom:15px;
+}
+
+.sidebar-links li a{
+    color:#fff;
+}
