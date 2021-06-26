@@ -1,1 +1,30 @@
-
+.navbar-brand a {
+    color: #303442;
+    font-size: 32px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .navbar-brand a:hover{
+      text-decoration: none;
+      color:  #f47629;
+  }
+  
+  .navbar-nav a {
+    padding: 0 20px;
+    color: #303442;
+    font-size: 16px;
+    font-weight:bold;
+  }
+  
+  .navbar-nav a:hover{
+      text-decoration: none;
+      color:  #f47629;
+  }
+  
+  .form-container{
+      max-width:500px;
+      width:100%;
+  }
+  
+ 

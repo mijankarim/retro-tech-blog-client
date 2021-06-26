@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import AddBlog from './components/AddBlog/AddBlog';
 import ManageBlogs from './components/ManageBlogs/ManageBlogs';
+import About from './components/About/About';
 
 export const UserContext = createContext();
 
@@ -28,6 +29,10 @@ function App() {
 
         <Route exact path="/blog/:id">
           <SinglePost/>
+          </Route>
+
+          <Route path="/about">
+            <About />
           </Route>
           
         <Route path="/login">

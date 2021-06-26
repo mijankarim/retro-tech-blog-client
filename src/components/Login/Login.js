@@ -1,10 +1,11 @@
 import React, { useState, useContext } from "react";
-import { Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import { UserContext } from "../../App";
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from "./firebase.config";
 import { useHistory, useLocation } from "react-router";
+import { Link } from "react-router-dom";
 
 if (firebase.apps.length === 0) {
   firebase.initializeApp(firebaseConfig);
@@ -96,53 +97,65 @@ const Login = () => {
   };
 
   return (
-    <div className="form-container mx-auto border border-dark px-4 py-4 my-4">
-      <h3 className="mb-3 text-center">Login</h3>
+    <Container>
+      <Row>
+        <Col>
+          <div>
+            <h3 className="text-center mt-5 mb-5">
+              <Link to="/">Retro Tech Blog</Link>
+            </h3>
+          </div>
+          <div className="form-container mx-auto border border-dark px-4 py-4 my-4">
+            <h3 className="mb-4 text-center">Login</h3>
+            <Form onSubmit={handleSubmit}>
+              <Form.Group controlId="formBasicEmail" className="mb-3">
+                <Form.Control
+                  onBlur={handleBlur}
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  required
+                />
+                {validation.email && (
+                  <p className="text-danger mt-3 text-center">
+                    {validation.email}
+                  </p>
+                )}
+              </Form.Group>
 
-      <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formBasicEmail">
-          <Form.Control
-            onBlur={handleBlur}
-            type="email"
-            name="email"
-            placeholder="Email"
-            required
-          />
-          {validation.email && (
-            <p className="text-danger mt-3 text-center">{validation.email}</p>
-          )}
-        </Form.Group>
+              <Form.Group controlId="formBasicPassword" className="mb-3">
+                <Form.Control
+                  onBlur={handleBlur}
+                  type="password"
+                  name="password"
+                  placeholder="Password"
+                  required
+                />
+                {validation.password && (
+                  <p className="text-danger mt-3 text-center">
+                    {validation.password}
+                  </p>
+                )}
+              </Form.Group>
 
-        <Form.Group controlId="formBasicPassword">
-          <Form.Control
-            onBlur={handleBlur}
-            type="password"
-            name="password"
-            placeholder="Password"
-            required
-          />
-          {validation.password && (
-            <p className="text-danger mt-3 text-center">
-              {validation.password}
-            </p>
-          )}
-        </Form.Group>
+              <Button className="city-btn full-width-btn" type="submit">
+                Sign In
+              </Button>
+            </Form>
 
-        <Button className="city-btn full-width-btn" type="submit">
-          Sign In
-        </Button>
-      </Form>
+            {user.error && (
+              <p className="text-danger mt-3 text-center">{user.error}</p>
+            )}
 
-      {user.error && (
-        <p className="text-danger mt-3 text-center">{user.error}</p>
-      )}
-
-      {user.success && (
-        <p className="text-success mt-3 text-center">
-          User Logged In Successfully.
-        </p>
-      )}
-    </div>
+            {user.success && (
+              <p className="text-success mt-3 text-center">
+                User Logged In Successfully.
+              </p>
+            )}
+          </div>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 
