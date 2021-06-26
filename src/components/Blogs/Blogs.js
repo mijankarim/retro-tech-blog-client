@@ -30,8 +30,8 @@ const Blogs = () => {
                 </div>
               ) : (
                 posts.map((post) => (
-                  <div>
-                    <Blog post={post} />
+                  <div  key={post._id}>
+                    <Blog post={post}/>
                   </div>
                 ))
               )}

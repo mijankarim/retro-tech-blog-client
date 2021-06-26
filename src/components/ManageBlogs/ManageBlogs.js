@@ -58,7 +58,7 @@ const ManageBlogs = () => {
                   {blogs.map((blog) => (
                     <tr key={blog._id}>
                       <td>{blog.title}</td>
-                      <td>{blog.content}</td>
+                      <td><div className="limit-text">{blog.content}</div></td>
                       
                       <td className="text-center">
                         <Button

@@ -3,23 +3,27 @@ import { Container, Row, Col, Button } from "react-bootstrap";
 import { useHistory } from "react-router-dom";
 
 const Blog = (props) => {
-  console.log(props);
   const { title, content, image, _id: id } = props.post;
   const history = useHistory();
   const handleClick = () => history.push(`blog/${id}`);
 
   return (
-    <Container className="my-5">
-      <Row className="mb-5">
+    <Container className="my-4">
+      <Row>
         <Col>
-          <img src={image} alt={title} onClick={handleClick} />
+          <img
+            src={image}
+            alt={title}
+            onClick={handleClick}
+            className="cursor-pointer"
+          />
 
-          <h4 className="my-3" onClick={handleClick}>
+          <h3 className="my-3 cursor-pointer" onClick={handleClick}>
             {title}
-          </h4>
+          </h3>
 
-          <div>{content}</div>
-          <Button className="mt-3" onClick={handleClick}>
+          <div className="limit-text">{content}</div>
+          <Button className="mt-4 mb-3" onClick={handleClick}>
             Read More
           </Button>
         </Col>
